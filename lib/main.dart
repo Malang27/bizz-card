@@ -14,6 +14,28 @@ class BizzCardApp extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.blueAccent,
           title: const Text('BizzCard'),
+          actions: [
+            // Icône de partage
+            IconButton(
+              icon: const Icon(Icons.share),
+              onPressed: () {
+                // Action pour partager (optionnel)
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Partage non implémenté')),
+                );
+              },
+            ),
+            // Icône d'information
+            IconButton(
+              icon: const Icon(Icons.info),
+              onPressed: () {
+                // Action pour info (optionnel)
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('À propos de BizzCard')),
+                );
+              },
+            ),
+          ],
         ),
         body: const BizzCard(),
       ),
@@ -32,43 +54,44 @@ class BizzCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Profile picture
+            // Photo de profil
             Container(
               width: 150,
               height: 150,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: AssetImage('assets/profile.jpg'), // Add your image in assets folder
+                  image: AssetImage('assets/profile.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
             const SizedBox(height: 20),
-            // First Name and Last Name
+            // Prénom et nom
             const Text(
-              'John Doe',
+              'Malang Coulibaly',
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 10),
-            // Age
+            // Âge
             const Text(
-              'Age: 25',
+              'Age: 26',
               style: TextStyle(fontSize: 20),
             ),
             // Email
             const Text(
-              'Email: john.doe@example.com',
+              'Email: mvlang27@gmail.com',
               style: TextStyle(fontSize: 20),
             ),
-            // Phone Number
+            // Numéro de téléphone
             const Text(
-              'Phone: +1 123-456-7890',
+              'Phone: +221 77-594-56-91',
               style: TextStyle(fontSize: 20),
             ),
+            const SizedBox(height: 20),
           ],
         ),
       ),
