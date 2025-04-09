@@ -56,7 +56,7 @@ class BizzCard extends StatelessWidget {
           children: [
             // Photo de profil
             Container(
-              width: 150,
+              width: 250,
               height: 150,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
